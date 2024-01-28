@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+            <!-- Grant Location Container -->
+            <div class="sub-container grant-location-container">
+                <img src="Images/location.png" alt="" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access to get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- Search Weather Form -->
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search for city..." data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="Images/search.png" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- Loading Image Container -->
+            <div class="sub-container loading-container">
+                <img src="Images/loading.gif" loading="lazy" width="150" height="150">
+                <p>Loading...</p>
+            </div>
+
+            <!-- Not Found Image -->
+            <div id="notFoundImage" class="notFoundImage">
+                <img src="Images/not-found.png" width="400" height="400" loading="lazy" class="image404">
+                <p class="notFound">Error 404! City Not Found</p>
+            </div>
+
+
+            <!-- Show Weather Infomation -->
+            <div class="sub-container user-info-container">
+
+                <!-- City Name & Flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- Weather Description -->
+                <p data-weatherDesc></p>
+
+                <!-- Weather Description Image -->
+                <img data-weatherIcon>
+
+                <!-- City Temperature -->
+                <p data-temp></p>
+
+
+                <!-- 3 Card of Weather Description -->
+                <div class="parameter-container">
+
+                    <!-- Card 1 -->
+                    <div class="parameter">
+                        <img src="Images/wind.png" loading="lazy">
+                        <p>WindSpeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="parameter">
+                        <img src="Images/humidity.png" loading="lazy">
+                        <p>humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="parameter">
+                        <img src="Images/cloud.png" loading="lazy">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
