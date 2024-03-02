@@ -163,5 +163,5 @@ async function fetchSearchWeatherInfo(city){
 
 function showCityNotFoundImage() {
     var notFoundImage = document.getElementById("notFoundImage");
-    notFoundImage.classList.add("active");
+    notFoundImage.style.display = "flex";
 }
